@@ -7,8 +7,8 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
-        {/* pass palettes individually from the imported array */}
-        <Palette {...seedColors} />
+        {/* Use a chosen palette for demonstration during dev */}
+        <Palette {...seedColors[4]} />
       </div>
     );
   }
