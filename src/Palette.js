@@ -6,7 +6,7 @@ export default class Palette extends Component {
       <div className='Palette'>
         <div>{/* Navbar goes here */}</div>
         {/* ColorBox Components go here*/}
-        <div>COLOR BOXES</div>
+        <div className='Palette-colors'>COLOR BOXES</div>
         <div>{/* Footer here */}</div>
       </div>
     );
