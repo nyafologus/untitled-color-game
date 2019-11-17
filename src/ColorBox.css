@@ -18,7 +18,19 @@
 }
 
 .copy-button {
-  /* needs to be in the middle */
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  /* positon to the middle */
+  top: 50%;
+  left: 50%;
+  /* to center the button */
+  /* the element's width and height need to be taken into account */
+  /* offset it by subtracting half of the element's width horizontally*/
+  margin-left: -50px;
+  /* offset it by subtracting half of the element's height vertically*/
+  margin-top: -15px;
 }
 
 .see-more {
