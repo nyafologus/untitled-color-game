@@ -33,6 +33,10 @@ export default class ColorBox extends Component {
 
           {/* if this.state.copied is true, add the class "show" */}
           <div className={`copy-overlay ${copied && 'show'}`} style={{ background }} />
+          <div className={`copy-msg ${copied && 'show'}`}>
+            <h1>copied!</h1>
+            <p>{background}</p>
+          </div>
           <div className='copy-container'>
             <div className='box-content'>
               <span>{name}</span>

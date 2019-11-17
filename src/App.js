@@ -7,8 +7,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {/* Use a chosen palette for demonstration during dev */}
-        <Palette {...seedColors[6]} />
+        {/* Updating chosen palette because I get bored after a while :> */}
+        <Palette {...seedColors[2]} />
       </div>
     );
   }
