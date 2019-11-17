@@ -4,7 +4,8 @@
   /* we want to display 5 color boxes in a row */
   width: 20%;
   /* height only works when the container element has a set hight as well */
-  /* height: 25%; */
+  /* the container element is Palette-colors div  */
+  height: 25%;
   margin: 0 auto;
   cursor: pointer;
 }

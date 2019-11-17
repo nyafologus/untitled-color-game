@@ -1,0 +1,10 @@
+/* Palette parent container takes up 100 viewport height */
+.Palette {
+  height: 100vh;
+}
+
+/* Palette-colors is a div inside Palette and takes up 90% */
+/* It is because we want to save 10% for the Footer */
+.Palette-colors {
+  height: 90%;
+}
