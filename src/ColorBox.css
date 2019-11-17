@@ -86,7 +86,7 @@
 }
 
 /* mimic the copying event by utilizing the hover */
-.copy-overlay:hover {
+.copy-overlay.show {
   position: absolute;
   opacity: 1;
   transform: scale(50);
