@@ -13,10 +13,6 @@
 .copy-container {
 }
 
-.box-content {
-  /* {name} needs to be in the bottom left */
-}
-
 .copy-button {
   width: 100px;
   height: 30px;
@@ -49,6 +45,19 @@
 .ColorBox:hover .copy-button {
   opacity: 1;
   transition: 0.4s;
+}
+
+.box-content {
+  /* {name} needs to be in the bottom left */
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .see-more {
