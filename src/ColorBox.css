@@ -9,3 +9,18 @@
   margin: 0 auto;
   cursor: pointer;
 }
+
+.copy-container {
+}
+
+.box-content {
+  /* {name} needs to be in the bottom left */
+}
+
+.copy-button {
+  /* needs to be in the middle */
+}
+
+.see-more {
+  /* needs to be in the bottom right */
+}
