@@ -7,7 +7,7 @@ export default class ColorBox extends Component {
     // extract props for easier access using object destructuring
     const { name, background } = this.props;
     return (
-      <CopyToClipboard text='Now, when we click on a ColorBox, this very text should be copied on our clipboard.'>
+      <CopyToClipboard text={background}>
         <div className='ColorBox' style={{ background }}>
           <div className='copy-container'>
             <div className='box-content'>
