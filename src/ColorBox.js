@@ -3,6 +3,10 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './ColorBox.css';
 
 export default class ColorBox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { copied: false };
+  }
   render() {
     // extract props for easier access using object destructuring
     const { name, background } = this.props;
