@@ -36,7 +36,24 @@ const levels = [ 50, 100, 200, 300, 400, 500, 600, 700, 800, 900 ];
 // define a function that takes in a palette object and generates the different varieties of shades based on that palette's colors
 function generatePalette(starterPalette) {
   // make new Palette
-  let newPalette = {};
+  let newPalette = {
+    paletteName: starterPalette.paletteName,
+    id: starterPalette.id,
+    emoji: starterPalette.emoji,
+
+    // to fill our new colors object,
+    // let's loop over the levels array
+    // and add each one as a prop name
+    // then initialize each one as an empty array
+    // example:
+
+    colors: {
+      // 50: [],
+      // 100: [],
+      // 200: []
+      // ...
+    }
+  };
 
   // return new Palette
   return newPalette;
