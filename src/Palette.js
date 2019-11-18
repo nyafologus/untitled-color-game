@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
-import './Palette.css';
-import Slider, { createSliderWithTooltip } from 'rc-slider';
+import Slider  from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import './Palette.css';
 
-const SliderWithTooltip = createSliderWithTooltip(Slider);
 
-const style = { width: 300, margin: 20 };
+const style = { width: 300, margin: 20, fontWeight: 500};
 
-function percentFormatter(v) {
-  return `${v} %`;
-}
 
 export default class Palette extends Component {
   constructor(props) {
@@ -38,13 +34,27 @@ export default class Palette extends Component {
     ));
     return (
       <div className='Palette'>
+        
         <div style={style}>
-          <p>Sliderrrrrrr</p>
-          <SliderWithTooltip defaultValue={level} min={min} max={max} step={step} tipFormatter={percentFormatter} tipProps={{ overlayClassName: 'foo' }} onChange={this.onSliderChange} />
+          <span>Level: {level}</span>
+          <Slider defaultValue={level} min={min} max={max} step={step} onChange={this.onSliderChange} 
+                  trackStyle={{ backgroundColor: '#BADA55', height: 0 }}
+                  handleStyle={{
+                    borderColor: '#016e17',
+                    height: 13,
+                    width: 13,
+                    marginLeft: 0,
+                    marginTop: -3,
+                    backgroundColor: '#016e17',
+                    borderStyle: "solid",
+                    borderWidth: 2,
+                    boxShadow: "none"
+                  }}
+                  railStyle={{ height: 6 }}
+          />
         </div>
 
         <div>{/* Navbar goes here */}</div>
-        {/* ColorBox Components go here*/}
         <div className='Palette-colors'>{colorBoxes}</div>
         <div>{/* Footer here */}</div>
       </div>
