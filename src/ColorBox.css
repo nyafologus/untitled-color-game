@@ -33,6 +33,7 @@
   border-radius: 3px;
   border: none;
   background: rgba(255, 255, 255, 0.3);
+  /* TODO: adjust text color based on the luminosity of the background */
   color: white;
   text-align: center;
   line-height: 30px;
@@ -56,6 +57,7 @@
   bottom: 0px;
   left: 0px;
   padding: 10px;
+  /* TODO: adjust text color based on the luminosity of the background */
   color: black;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -70,6 +72,7 @@
   border: none;
   right: 0px;
   bottom: 0px;
+  /* TODO: adjust text color based on the luminosity of the background */
   color: white;
   width: 60px;
   height: 30px;
@@ -118,7 +121,7 @@
   transform: scale(1);
   z-index: 11;
   transition: transform 0.4s ease-in-out;
-  /* so background appears first and then the text */
+  /* so text appears only once the background fully grew */
   transition-delay: 0.25s;
 }
 
@@ -135,5 +138,6 @@
 .copy-msg p {
   font-size: 2rem;
   font-weight: 100;
+  /* TODO: adjust text color based on the luminosity of the background */
   color: white;
 }
