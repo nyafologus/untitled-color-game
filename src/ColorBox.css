@@ -8,7 +8,7 @@
   height: 25%;
   margin: 0 auto;
   cursor: pointer;
-  margin-bottom: -4px;  
+  margin-bottom: -4px;
 }
 
 .copy-container {
@@ -30,7 +30,7 @@
   margin-top: -15px;
   /* add translucent background */
   outline: none;
-  border-radius: 3px;
+  border-radius: 25px;
   border: none;
   background: rgba(255, 255, 255, 0.3);
   /* TODO: adjust text color based on the luminosity of the background */

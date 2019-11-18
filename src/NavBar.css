@@ -1,0 +1,39 @@
+.NavBar {
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: center;
+  height: 10vh;
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.logo {
+  margin: 15px;
+  padding: 0 13px;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+}
+
+.logo a {
+  font-family: Sarala;
+  font-weight: 700;
+  font-size: 3rem;
+  /* line-height: 1em; */
+  letter-spacing: -0.025em;
+  /* margin: 0; */
+  /* grid-column: 2; */
+  /* grid-row: 1; */
+  align-self: center;
+  text-decoration: none;
+  color: white;
+}
+
+.level-marker {
+  /* display: inline-block; */
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  margin-left: 20px;
+}

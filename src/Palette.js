@@ -1,41 +1,33 @@
 import React, { Component } from 'react';
 import ColorBox from './ColorBox';
-import Slider  from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import NavBar from './NavBar';
+// import Slider  from 'rc-slider';
+// import 'rc-slider/assets/index.css';
 import './Palette.css';
 
-
-const style = { width: 300, margin: 20, fontWeight: 500};
-
+// const style = { width: 300, margin: 20, fontWeight: 600 };
 
 export default class Palette extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 500,
-      min: 100,
-      max: 900,
-      step: 100
+      level: 500
     };
   }
 
   onSliderChange = (level) => {
     console.log(level);
-    this.setState({level});
-  }
+    this.setState({ level });
+  };
 
   render() {
-    
-    const {colors} = this.props.palette;
-    const {level, min, max, step} = this.state;
+    const { colors } = this.props.palette;
+    const { level, min, max, step } = this.state;
 
-    const colorBoxes = colors[level].map((color) => (
-      <ColorBox background={color.hex} name={color.name} />
-    ));
+    const colorBoxes = colors[level].map((color) => <ColorBox background={color.hex} name={color.name} />);
     return (
       <div className='Palette'>
-        
-        <div style={style}>
+        {/* <div style={style}>
           <span>Level: {level}</span>
           <Slider defaultValue={level} min={min} max={max} step={step} onChange={this.onSliderChange} 
                   trackStyle={{ backgroundColor: '#BADA55', height: 0 }}
@@ -52,9 +44,8 @@ export default class Palette extends Component {
                   }}
                   railStyle={{ height: 6 }}
           />
-        </div>
-
-        <div>{/* Navbar goes here */}</div>
+        </div> */}
+        <NavBar level={level} min={min} max={max} step={step} onSliderChange={this.onSliderChange} />
         <div className='Palette-colors'>{colorBoxes}</div>
         <div>{/* Footer here */}</div>
       </div>
