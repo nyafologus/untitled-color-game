@@ -11,10 +11,10 @@ export default class ColorBox extends Component {
   }
 
   changeCopyState() {
-    // change 'copied' state to true for 1.5sec
+    // change 'copied' state to true for 1.3sec
     // then change it back to false afterwards
     this.setState({ copied: true }, () => {
-      setTimeout(() => this.setState({ copied: false }), 1500);
+      setTimeout(() => this.setState({ copied: false }), 1300);
     });
   }
 

@@ -20,16 +20,16 @@ export default class NavBar extends Component {
             max={900}
             step={100}
             onChange={onSliderChange}
-            trackStyle={{ backgroundColor: '#BADA55', height: 0 }}
+            trackStyle={{ height: 0 }}
             handleStyle={{
-              borderColor: '#6d0036',
-              height: 13,
-              width: 13,
+              borderColor: '#0f1150',
+              height: 17,
+              width: 17,
               marginLeft: 0,
-              marginTop: -3,
-              backgroundColor: '#6d0036',
+              marginTop: -4.5,
+              backgroundColor: '#0f1150',
               borderStyle: 'solid',
-              borderWidth: 2,
+              borderWidth: 5,
               boxShadow: 'none'
             }}
             railStyle={{ height: 6 }}
