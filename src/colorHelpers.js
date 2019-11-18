@@ -131,3 +131,40 @@ function generateScale(hexColor, numberOfColors) {
 
 // export it, import it, call it
 export { generatePalette };
+
+// console.log(generatePalette(seedColors[2])) shows how the generated Palette looks like:
+
+// {paletteName: "Flat UI Colors Dutch", id: "flat-ui-colors-dutch", emoji: "🇳🇱", colors: {…}}
+// colors:
+// 50: (20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// ...
+// ...
+// 800: Array(20)
+// 0: {name: "Sunflower 800", id: "sunflower", hex: "#c28f03", rgb: "rgb(194,143,3)", rgba: "rgb(194,143,3,1.0)"}
+// 1: {name: "Energos 800", id: "energos", hex: "#8baf10", rgb: "rgb(139,175,16)", rgba: "rgb(139,175,16,1.0)"}
+// 2: {name: "BlueMartina 800", id: "bluemartina", hex: "#03958f", rgb: "rgb(3,149,143)", rgba: "rgb(3,149,143,1.0)"}
+// 3: {name: "LavenderRose 800", id: "lavenderrose", hex: "#c473a9", rgb: "rgb(196,115,169)", rgba: "rgb(196,115,169,1.0)"}
+// 4: {name: "BaraRose 800", id: "bararose", hex: "#b01839", rgb: "rgb(176,24,57)", rgba: "rgb(176,24,57,1.0)"}
+// 5: {name: "RadiantYellow 800", id: "radiantyellow", hex: "#ba6d06", rgb: "rgb(186,109,6)", rgba: "rgb(186,109,6,1.0)"}
+// 6: {name: "AndroidGreen 800", id: "androidgreen", hex: "#6c9610", rgb: "rgb(108,150,16)", rgba: "rgb(108,150,16,1.0)"}
+// 7: {name: "MediterraneanSea 800", id: "mediterraneansea", hex: "#035874", rgb: "rgb(3,88,116)", rgba: "rgb(3,88,116,1.0)"}
+// 8: {name: "LavenderTea 800", id: "lavendertea", hex: "#a14cc2", rgb: "rgb(161,76,194)", rgba: "rgb(161,76,194,1.0)"}
+// 9: {name: "VerryBerry 800", id: "verryberry", hex: "#7d0d42", rgb: "rgb(125,13,66)", rgba: "rgb(125,13,66,1.0)"}
+// 10: {name: "PuffinsBill 800", id: "puffinsbill", hex: "#af2007", rgb: "rgb(175,32,7)", rgba: "rgb(175,32,7,1.0)"}
+// 11: {name: "PixelatedGrass 800", id: "pixelatedgrass", hex: "#01600b", rgb: "rgb(1,96,11)", rgba: "rgb(1,96,11,1.0)"}
+// 12: {name: "MerchantMarineBlue 800", id: "merchantmarineblue", hex: "#0329a5", rgb: "rgb(3,41,165)", rgba: "rgb(3,41,165,1.0)"}
+// 13: {name: "ForgottenPurple 800", id: "forgottenpurple", hex: "#614fc2", rgb: "rgb(97,79,194)", rgba: "rgb(97,79,194,1.0)"}
+// 14: {name: "HollyHock 800", id: "hollyhock", hex: "#500b42", rgb: "rgb(80,11,66)", rgba: "rgb(80,11,66,1.0)"}
+// 15: {name: "RedPigment 800", id: "redpigment", hex: "#aa0609", rgb: "rgb(170,6,9)", rgba: "rgb(170,6,9,1.0)"}
+// 16: {name: "TurkishAqua 800", id: "turkishaqua", hex: "#003338", rgb: "rgb(0,51,56)", rgba: "rgb(0,51,56,1.0)"}
+// 17: {name: "20000LeaguesUnderTheSea 800", id: "20000leaguesunderthesea", hex: "#040837", rgb: "rgb(4,8,55)", rgba: "rgb(4,8,55,1.0)"}
+// 18: {name: "CircumorbitalRing 800", id: "circumorbitalring", hex: "#1d2c86", rgb: "rgb(29,44,134)", rgba: "rgb(29,44,134,1.0)"}
+// 19: {name: "MagentaPurple 800", id: "magentapurple", hex: "#3e0525", rgb: "rgb(62,5,37)", rgba: "rgb(62,5,37,1.0)"}
+// length: 20
+// __proto__: Array(0)
+// ...
+// ...
+// 900: (20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// emoji: "🇳🇱"
+// id: "flat-ui-colors-dutch"
+// paletteName: "Flat UI Colors Dutch"
