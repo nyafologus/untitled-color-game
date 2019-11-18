@@ -1,4 +1,4 @@
-// A reminder of how a palette object is structured
+// A reminder of how a starter palette object is structured
 
 // {
 //   paletteName: 'Flat UI Colors Dutch',
@@ -27,3 +27,17 @@
 //     { name: 'MagentaPurple', color: '#6F1E51' }
 //   ]
 // }
+
+import chroma from 'chroma-js';
+
+// define an array for the different levels
+const levels = [ 50, 100, 200, 300, 400, 500, 600, 700, 800, 900 ];
+
+// define a function that takes in a palette object and generates the different varieties of shades based on that palette's colors
+function generatePalette(starterPalette) {
+  // make new Palette
+  let newPalette = {};
+
+  // return new Palette
+  return newPalette;
+}
