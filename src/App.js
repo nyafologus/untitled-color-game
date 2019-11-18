@@ -6,11 +6,10 @@ import { generatePalette } from './colorHelpers';
 
 export default class App extends Component {
   render() {
-    console.log(generatePalette(seedColors[2], 10));
     return (
       <div>
-        {/* Updating chosen palette because I get bored after a while :> */}
-        <Palette {...seedColors[2]} />
+        {/* passing the newly generated palette down to the Palette Component as a prop */}
+        <Palette palette={generatePalette(seedColors[2])} />
       </div>
     );
   }
