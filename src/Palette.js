@@ -29,15 +29,18 @@ export default class Palette extends Component {
   }
 
   render() {
-    // TODO: implement a slider to dinamically change color value
-    const colorBoxes = this.props.palette.colors[this.state.level].map((color) => (
+    
+    const {colors} = this.props.palette;
+    const {level, min, max, step} = this.state;
+
+    const colorBoxes = colors[level].map((color) => (
       <ColorBox background={color.hex} name={color.name} />
     ));
     return (
       <div className='Palette'>
         <div style={style}>
           <p>Sliderrrrrrr</p>
-          <SliderWithTooltip defaultValue={this.state.level} min={this.state.min} max={this.state.max} step={this.state.step} tipFormatter={percentFormatter} tipProps={{ overlayClassName: 'foo' }} onChange={this.onSliderChange} />
+          <SliderWithTooltip defaultValue={level} min={min} max={max} step={step} tipFormatter={percentFormatter} tipProps={{ overlayClassName: 'foo' }} onChange={this.onSliderChange} />
         </div>
 
         <div>{/* Navbar goes here */}</div>
