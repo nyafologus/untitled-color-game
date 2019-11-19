@@ -7,7 +7,8 @@ export default class Palette extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 600
+      level: 600,
+      colorFormat: 'hex'
     };
   }
 
@@ -16,14 +17,22 @@ export default class Palette extends Component {
     this.setState({ level });
   };
 
+  handleColorFormatChange = (newFormat) => {
+    this.setState({ colorFormat: newFormat });
+  };
+
   render() {
     const { colors } = this.props.palette;
-    const { level, min, max, step } = this.state;
+    const { level, colorFormat } = this.state;
 
-    const colorBoxes = colors[level].map((color) => <ColorBox background={color.hex} name={color.name} />);
+    const colorBoxes = colors[level].map((color) => <ColorBox background={color[colorFormat]} name={color.name} />);
     return (
       <div className='Palette'>
-        <NavBar level={level} min={min} max={max} step={step} onSliderChange={this.onSliderChange} />
+        <NavBar
+          level={level}
+          onSliderChange={this.onSliderChange}
+          handleColorFormatChange={this.handleColorFormatChange}
+        />
         <div className='Palette-colors'>{colorBoxes}</div>
         <div>{/* Footer here */}</div>
       </div>
