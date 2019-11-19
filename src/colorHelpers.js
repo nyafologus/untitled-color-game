@@ -85,7 +85,7 @@ function generatePalette(starterPalette) {
         hex: scale[i],
         // set the rgb value, first turn it to a chroma color then call .css() on it.
         rgb: chroma(scale[i]).css(),
-        rgba: chroma(scale[i]).css().replace('rgba', 'rgba').replace(')', ',1.0)')
+        rgba: chroma(scale[i]).css().replace('rgb', 'rgba').replace(')', ',1.0)')
       });
     }
   }
