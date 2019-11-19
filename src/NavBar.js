@@ -5,6 +5,7 @@ import './NavBar.css';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Snackbar from '@material-ui/core/Snackbar';
+import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
 export default class NavBar extends Component {
@@ -82,6 +83,15 @@ export default class NavBar extends Component {
             open={this.state.open}
             autoHideDuration={3000}
             onClose={this.handleClose}
+            message={<span id='message-id'>format changed!</span>}
+            // help screen-readers and a11y to find the content
+            ContentProps={{ 'aria-describedby': 'message-id' }}
+            action={[
+              // to make a button with an icon we need an IconButton :3
+              <IconButton>
+                <CloseIcon />
+              </IconButton>
+            ]}
           />
         </div>
       </header>
