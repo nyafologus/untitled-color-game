@@ -4,10 +4,29 @@ import 'rc-slider/assets/index.css';
 import './NavBar.css';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
+import Snackbar from '@material-ui/core/Snackbar';
+import CloseIcon from '@material-ui/icons/Close';
 
 export default class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+  }
+
   handleChange = (e) => {
     this.props.handleColorFormatChange(e.target.value);
+  };
+
+  handleClick = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
   };
 
   render() {
@@ -53,7 +72,27 @@ export default class NavBar extends Component {
             <MenuItem value={'rgba'}>RGBA - rgba(186,218,85,1.0)</MenuItem>
           </Select>
         </div>
+
+        <div className='snackbar-container'>
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left'
+            }}
+            open={this.state.open}
+            autoHideDuration={3000}
+            onClose={this.handleClose}
+          />
+        </div>
       </header>
     );
   }
 }
+
+// {
+//   backgroundColor: green[600],
+//   fontSize: 20,
+//   display: 'flex',
+//   alignItems: 'center',
+
+// }
