@@ -100,11 +100,3 @@ export default class NavBar extends Component {
     );
   }
 }
-
-// {
-//   backgroundColor: green[600],
-//   fontSize: 20,
-//   display: 'flex',
-//   alignItems: 'center',
-
-// }
