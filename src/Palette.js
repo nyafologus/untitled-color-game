@@ -31,6 +31,7 @@ export default class Palette extends Component {
         <NavBar
           level={level}
           onSliderChange={this.onSliderChange}
+          format={colorFormat}
           handleColorFormatChange={this.handleColorFormatChange}
         />
         <div className='Palette-colors'>{colorBoxes}</div>

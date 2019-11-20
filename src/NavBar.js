@@ -18,6 +18,7 @@ export default class NavBar extends Component {
 
   handleChange = (e) => {
     this.props.handleColorFormatChange(e.target.value);
+    this.handleClick();
   };
 
   handleClick = () => {
@@ -25,13 +26,14 @@ export default class NavBar extends Component {
   };
 
   handleClose = (event, reason) => {
+    this.setState({ open: false });
     if (reason === 'clickaway') {
       return;
     }
   };
 
   render() {
-    const { level, onSliderChange } = this.props;
+    const { level, onSliderChange, format } = this.props;
 
     const style = { width: 300, margin: 20 };
     return (
@@ -67,10 +69,10 @@ export default class NavBar extends Component {
         </div>
 
         <div className='select-container'>
-          <Select onChange={this.handleChange}>
-            <MenuItem value={'hex'}>HEX - #BADA55</MenuItem>
-            <MenuItem value={'rgb'}>RGB - rgb(186,218,85)</MenuItem>
-            <MenuItem value={'rgba'}>RGBA - rgba(186,218,85,1.0)</MenuItem>
+          <Select value={format} onChange={this.handleChange}>
+            <MenuItem value='hex'>HEX - #BADA55</MenuItem>
+            <MenuItem value='rgb'>RGB - rgb(186,218,85)</MenuItem>
+            <MenuItem value='rgba'>RGBA - rgba(186,218,85,1.0)</MenuItem>
           </Select>
         </div>
 
@@ -83,12 +85,12 @@ export default class NavBar extends Component {
             open={this.state.open}
             autoHideDuration={3000}
             onClose={this.handleClose}
-            message={<span id='message-id'>format changed!</span>}
+            message={<span id='message-id'>format changed to {format.toUpperCase()}</span>}
             // help screen-readers and a11y to find the content
             ContentProps={{ 'aria-describedby': 'message-id' }}
             action={[
               // to make a button with an icon we need an IconButton :3
-              <IconButton>
+              <IconButton onClick={this.handleClose} key='close' aria-label='close'>
                 <CloseIcon />
               </IconButton>
             ]}
