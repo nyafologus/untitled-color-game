@@ -1,6 +1,9 @@
 /* Palette parent container takes up 100 viewport height */
 .Palette {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* Palette-colors is a div inside Palette and takes up 90% */
@@ -14,9 +17,11 @@
   justify-content: flex-end;
   align-items: center;
   height: 5vh;
-  background-color: white;
   font-weight: bold;
   margin-right: 1rem;
+  font-family: Sarala;
+  font-size: 1.3rem;
+  color: black;
 }
 
 .emoji {
